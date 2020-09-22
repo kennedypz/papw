@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { ContadorComponent } from './contador/contador.component';
+import { CardProfileComponent } from './card-profile/card-profile.component';
+import { DiretivasComponent } from './diretivas/diretivas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RodapeComponent,
-    ContadorComponent
+    ContadorComponent,
+    CardProfileComponent,
+    DiretivasComponent
   ],
   imports: [
     BrowserModule,

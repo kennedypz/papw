@@ -1,0 +1,30 @@
+<div class="container">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="card-profile.component.css">
+  <h2>Perfil de {{ usuario }}</h2>
+
+  <div *ngIf="exibe" class="card" style="width:400px">
+    <p><img [src]="imagem" alt="Avatar" style="width:60%"></p>
+    
+    <div class="card-body">
+      <p class="card-text"> {{ usuario }}</p>
+      <p class="card-text"> {{ profissao }}</p>
+      <p class="card-text"> {{ descricao }}</p>
+    </div>
+
+
+    <div *ngFor="let certification of lista">
+      <div class="alert alert-primary" role="alert">
+        {{ certification.name }}
+        {{ certification.id }}
+        {{ certification.cert }}
+      </div>
+    </div>
+
+  </div>
+
+  <div class="w3-section">
+    <button class="w3-button w3-blue" (click)="exibePerfil()">Exibir/Ocultar</button>
+  </div>
+
+</div>
