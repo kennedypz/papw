@@ -13,9 +13,16 @@ export class FormReativoComponent implements OnInit {
   constructor() {
     this.formCadastro = new FormGroup(
       {
-        'nome': new FormControl(null, Validators.required),
+        'nome': new FormControl(
+          null, 
+          [
+            Validators.required,
+            Validators.minLength(5),
+            Validators.maxLength(150)
+          ]
+        ),
         'telefone': new FormControl(null, Validators.required),
-        'email': new FormControl(null, Validators.required),
+        'email': new FormControl(null, [Validators.required, Validators.email]),
       }
     );
 

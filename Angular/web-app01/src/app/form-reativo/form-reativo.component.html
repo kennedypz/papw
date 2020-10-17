@@ -1,1 +1,21 @@
-<p>form-reativo works!</p>
+<form>
+
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" ngModel required>
+    </div>
+
+    <div>
+        <label for="telefone">Telefone:</label>
+        <input type="text" name="telefone" id="telefone" ngModel required>
+    </div>
+
+    <div>
+        <label for="endereco">Endereço:</label>
+        <input type="text" name="endereco" id="endereco" ngModel required>
+    </div>
+
+    <div>
+        <button type="submit" (click) = "onSubmit()">Enviar</button>
+    </div>
+</form>

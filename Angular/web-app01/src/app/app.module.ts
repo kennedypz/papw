@@ -10,6 +10,7 @@ import { CardProfileComponent } from './card-profile/card-profile.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { FormReativoComponent } from './form-reativo/form-reativo.component';
+import { CalculadoraComponent } from './calculadora/calculadora.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormReativoComponent } from './form-reativo/form-reativo.component';
     CardProfileComponent,
     DiretivasComponent,
     TemplateFormComponent,
-    FormReativoComponent
+    FormReativoComponent,
+    CalculadoraComponent
   ],
   imports: [
     BrowserModule,

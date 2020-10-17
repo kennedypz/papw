@@ -2,20 +2,20 @@
 
     <div>
         <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome" ngModel required>
+        <input type="text" name="nome" id="nome" ngModel required class="textFieldStyle">
     </div>
 
     <div>
         <label for="telefone">Telefone:</label>
-        <input type="text" name="telefone" id="telefone" ngModel required>
+        <input type="text" name="telefone" id="telefone" ngModel required class="textFieldStyle" data-mask="(00) 0000-0000" data-mask-selectonfocus="true">
     </div>
 
     <div>
         <label for="endereco">Endereço:</label>
-        <input type="text" name="endereco" id="endereco" ngModel required>
+        <input type="text" name="endereco" id="endereco" ngModel required class="textFieldStyle">
     </div>
 
     <div>
-        <button type="submit" [disabled]="f.form.invalid">Enviar</button>
+        <button type="submit" [disabled]="f.form.invalid" class="sendButtonStyle">Enviar</button>
     </div>
 </form>
