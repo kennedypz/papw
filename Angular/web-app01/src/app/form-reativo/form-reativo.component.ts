@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-form-reativo',
@@ -21,7 +21,7 @@ export class FormReativoComponent implements OnInit {
             Validators.maxLength(150)
           ]
         ),
-        'telefone': new FormControl(null, Validators.required),
+        'telefone': new FormControl(null, [Validators.required, Validators.pattern('[0-9]+')]),
         'email': new FormControl(null, [Validators.required, Validators.email]),
       }
     );
@@ -35,8 +35,8 @@ export class FormReativoComponent implements OnInit {
     let dados = `
       Nome: ${this.formCadastro.value.nome}
       Telefone: ${this.formCadastro.value.telefone}
-      Endereço: ${this.formCadastro.value.endereco}
+      Email: ${this.formCadastro.value.email}
     `
-    console.log(dados);
+    console.log(this.formCadastro.valid);
   }
 }
